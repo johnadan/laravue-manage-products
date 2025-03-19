@@ -1,15 +1,15 @@
 # Laravel-Vue Admin Dashboard
 
-This project is a full-stack web application using Laravel 12 and Vue 3 (with Vite) that features an Admin Dashboard, authentication, and a complete Product management system with CRUD functionality. The dashboard layout (including a sidebar) resembles the AdminLTE v3 theme using Bootstrap 5 for styling.
+This project is a full-stack web application using Laravel 12 and Vue 3 (with Vite) that features an Admin Dashboard, authentication, and a complete Product management system with CRUD functionality. The dashboard layout uses Bootstrap 5 for styling.
 
 ## Features
 
 - **Admin Dashboard**
-  - Sidebar navigation and content area resembling AdminLTE
-  - Dashboard overview page
+  - Sidebar navigation and content are
+  - Dashboard page
 
 - **Authentication**
-  - Laravel’s default authentication (with a customized login to accept username or email)
+  - Laravel’s default authentication 
   - “Remember me” functionality for indefinite login
   - Default admin user seeded via Laravel Seeder
 
@@ -26,7 +26,7 @@ This project is a full-stack web application using Laravel 12 and Vue 3 (with Vi
 
 - **Frontend SPA**
   - Built with Vue 3 and Vue Router
-  - Vite as the build tool for a modern development experience
+  - Vite as the build tool 
 
 - **Database**
   - Uses MySQL (configured via local phpMyAdmin)
