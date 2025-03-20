@@ -76,14 +76,28 @@
         params.append('page', page);
 
         // fetch(`/api/products?${params.toString()}`)
-        fetch(`/api/products?${params.toString()}`, {
+        // fetch(`/api/products?${params.toString()}`, {
+        fetch(`http://localhost:8001/api/products?${params.toString()}`, {
+            credentials: 'include',
             headers: {
                 'Accept': 'application/json',
-            },
-            credentials: 'include'
+            }
         })
-          .then(response => response.json())
-          .then(data => { this.products = data; });
+        //   .then(response => response.json())
+        //   .then(data => { this.products = data; });
+        .then(response => {
+            if (!response.ok) {
+            throw new Error('Unauthorized or error fetching products');
+            }
+            return response.json();
+        })
+        .then(data => {
+            this.products = data;
+        })
+        .catch(error => {
+            console.error(error);
+            // Optionally, handle unauthorized errors (for example, redirect to login)
+        });
       },
       changePage(page) {
         this.fetchProducts(page);
